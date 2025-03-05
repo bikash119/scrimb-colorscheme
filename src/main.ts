@@ -1,5 +1,5 @@
 import './style.css'
-import {Color, ColorMode, HEX, RGB, SchemeRequestQueryParams
+import {Color, ColorMode, HEX, SchemeRequestQueryParams
   ,SchemeResponse
 } from './types/color.ts'
 
@@ -11,7 +11,6 @@ const modeModalEl: HTMLDivElement| null = document.querySelector<HTMLDivElement>
 const darkModeToggleElL: HTMLButtonElement|null = document.querySelector<HTMLButtonElement>("#dark-mode")
 const colorapiBaseURL:URL = new URL("https://www.thecolorapi.com")
 const schemeEndpoint: string = "scheme"
-const colorIdentificationEndpoint: string = "id"
 const count: number = 5
 const selectedMode = ColorMode[0]
 let isDarkMode = false
