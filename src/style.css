@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@theme {
+  --font-inter: "Inter","sans-serif";
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.tooltip-element {
+  position: relative;
+}
+
+.tooltip-element:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+}
